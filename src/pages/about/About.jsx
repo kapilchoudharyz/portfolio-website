@@ -12,13 +12,13 @@ function About() {
           "about bg-primary_dark_bg   min-h-screen  overflow-x-hidden "
         }
       >
-        <div className="about__wrapper min-h-screen-screen  text-white w-screen flex flex-col items-center justify-center">
-          <div className="heading__wrapper h-screen flex flex-col items-center justify-center gap-y-8 w-full  ">
-            <h1 className="text-5vw font-bold ">
+        <div className="flex w-screen flex-col items-center justify-center text-white about__wrapper min-h-screen-screen">
+          <div className="flex h-screen w-full flex-col items-center justify-center gap-y-8 heading__wrapper">
+            <h1 className="font-bold text-5vw">
               I craft beautiful <br /> and engaging web <br /> experiences.
             </h1>
           </div>
-          <div className="info__about__me min-h-screen px-3 laptop:w-aboutWidth flex flex-col items-center justify-center gap-y-8 smallerMobile:px-6 tablet:px-28 py-4 laptop:px-0">
+          <div className="flex min-h-screen flex-col items-center justify-center gap-y-8 laptop:px-0 px-3 smallerMobile:px-6 tablet:px-28 py-4 info__about__me laptop:w-aboutWidth">
             <h2
               className={
                 "text-7vw  font-extrabold text-red-600 text-start  w-full "
@@ -48,7 +48,7 @@ function About() {
                 also meet their specific needs.
               </span>
             </h3>
-            <div className="resume__wrapper w-full">
+            <div className="w-full resume__wrapper">
               <a href={"public/kapil.jpg"} className={"links"} download={true}>
                 Download resume
               </a>

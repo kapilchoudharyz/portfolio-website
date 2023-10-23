@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary_dark_bg: "#000000",
+        glassy_bg: "rgba(255, 255, 255, 0.25)",
       },
 
       fontSize: {

@@ -65,6 +65,14 @@
     width: 20rem;
 }
 
+.img__wrapper {
+    width: 100%;
+}
+
+img {
+    min-width: unset;
+}
+
 .home__vector {
     height: 100vh;
 }

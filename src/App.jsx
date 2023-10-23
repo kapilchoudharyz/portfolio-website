@@ -1,9 +1,10 @@
-import Home from "./pages/home/Home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./pages/about/About.jsx";
-import Contact from "./pages/contact/Contact.jsx";
-import Work from "./pages/work/Work.jsx";
-import Navbar from "./components/navbar/Navbar.jsx";
+import { lazy, Suspense } from "react";
+
+const Home = lazy(() => import("./pages/home/Home.jsx"));
+const About = lazy(() => import("./pages/about/About.jsx"));
+const Contact = lazy(() => import("./pages/contact/Contact.jsx"));
+const Work = lazy(() => import("./pages/work/Work.jsx"));
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -24,7 +25,19 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <Suspense
+        fallback={
+          <div
+            className={
+              "h-screen w-screen text-8xl text-stone-900 flex items-center justify-center bg-primary_dark_bg"
+            }
+          >
+            Loading...
+          </div>
+        }
+      >
+        <RouterProvider router={router}></RouterProvider>
+      </Suspense>
     </>
   );
 }

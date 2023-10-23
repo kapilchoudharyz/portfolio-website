@@ -1,12 +1,11 @@
 import Navbar from "../../components/navbar/Navbar.jsx";
 
 function Header() {
-    return (
-        <>
-            <Navbar/>
-
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default Header;

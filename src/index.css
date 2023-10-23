@@ -5,10 +5,24 @@
     .links {
         @apply text-red-600 text-start text-xl
     }
+
+    .navLinks {
+        @apply text-red-600 w-[11rem] laptop:w-[25vw] text-6xl font-extrabold tablet:text-7xl laptop:text-[7vw]
+    }
+
+    .navLinksWrapper {
+        @apply w-[12rem]
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+
 }
