@@ -51,8 +51,12 @@ function About() {
               </span>
             </h3>
             <div className="w-full resume__wrapper">
-              <a href={"public/kapil.jpg"} className={"links"} download={true}>
-                Download resume
+              <a
+                href={"public/kapil_resume.pdf"}
+                className={"links"}
+                download={true}
+              >
+                Download resume (pdf 67kb)
               </a>
             </div>
           </div>
