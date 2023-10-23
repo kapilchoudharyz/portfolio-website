@@ -4,19 +4,24 @@ function Work() {
   const workData = [
     {
       projectName: "Mapty App",
-      URL: "https://6534d6068b4dfd3fdc51f582--exquisite-cupcake-56e0eb.netlify.app/",
+      URL: "https://workoutplace-tracker.netlify.app/",
       infos: "An application where you can track your workout.",
     },
     {
       projectName: "Bankist App",
-      URL: "https://65355f0112f69417c7f5d98c--gregarious-cascaron-9af8d0.netlify.app/",
+      URL: "https://bankk-app.netlify.app/",
       infos: "A mock banking web application with multiple functionalities",
     },
     {
       projectName: "Bankist Site",
-      URL: "https://653564359c63b36359358e2f--golden-alfajores-084589.netlify.app/",
+      URL: "https://bankistt-website.netlify.app/",
       infos:
         "A visually appealing banking website to create an account or know about the bank.",
+    },
+    {
+      projectName: "Track your trip",
+      URL: "https://track-your-trip.netlify.app/",
+      infos: "Track your trip on the map throughout the world",
     },
   ];
   return (
@@ -27,7 +32,7 @@ function Work() {
           {workData.map((work) => (
             <a
               className={
-                "flex flex-col gap-y-4 tablet:gap-y-[2vw] hover:translate-x-7 transition-all ease-out duration-300"
+                "flex flex-col gap-y-4 tablet:gap-y-[2vw] hover:translate-x-6 tablet:hover:translate-x-16 transition-all ease-out duration-300"
               }
               href={work.URL}
               key={Math.random() * 18}

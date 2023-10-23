@@ -35,7 +35,9 @@ function Home() {
       {!isOverlayClicked && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
+          transition={{ type: "spring", stiffness: 500, delay: 0.6 }}
           className={
             "overlay__message text-stone-100 absolute bottom-20 m-auto laptop:hidden w-screen text-center"
           }
@@ -44,29 +46,44 @@ function Home() {
         </motion.div>
       )}
 
-      <nav className="flex h-screen flex-col items-center justify-center gap-y-2 w-[500px] laptop:w-[30vw] shrink-0">
-        <div
-          className="about__wrapper navLinksWrapper"
-          onMouseEnter={() => {
-            setIsAboutHovered(true);
-          }}
-          onMouseLeave={() => {
-            isOverlayClicked
-              ? setIsAboutHovered(true)
-              : setIsAboutHovered(false);
-          }}
-        >
-          {isAboutHovered && (
-            <NavLink to={"about"} className={"navLinks text-stone-100"}>
-              About
-            </NavLink>
-          )}
+      <motion.nav
+        // initial={{ opacity: 0, x: -30 }}
+        // animate={{ opacity: 1, x: 0 }}
+        // exit={{ opacity: 0, x: -30 }}
+        className="flex h-screen flex-col items-center justify-center gap-y-4 w-[500px] laptop:w-[30vw] shrink-0 laptop:z-10"
+      >
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            className="about__wrapper navLinksWrapper"
+            onMouseEnter={() => {
+              setIsAboutHovered(true);
+            }}
+            onMouseLeave={() => {
+              isOverlayClicked
+                ? setIsAboutHovered(true)
+                : setIsAboutHovered(false);
+            }}
+          >
+            {isAboutHovered && (
+              <NavLink to={"about"} className={"navLinks text-stone-100"}>
+                About
+              </NavLink>
+            )}
 
-          {!isAboutHovered && (
-            <div className={"navLinks text-stone-100"}>Hello.</div>
-          )}
-        </div>
-        <div
+            {!isAboutHovered && (
+              <div className={"navLinks text-stone-100"}>Hello.</div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -30 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 300 }}
           className="work__wrapper navLinksWrapper"
           onMouseEnter={() => setIsWorkHovered(true)}
           onMouseLeave={() => {
@@ -75,13 +92,17 @@ function Home() {
         >
           {isWorkHovered && (
             <NavLink to={"work"} className={"navLinks"}>
-              Work
+              Projects
             </NavLink>
           )}
 
           {!isWorkHovered && <div className={"navLinks"}>I am</div>}
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -30 }}
+          transition={{ delay: 0.4, type: "spring", stiffness: 300 }}
           className="contact__wrapper navLinksWrapper"
           onMouseEnter={() => setIsContactHovered(true)}
           onMouseLeave={() => {
@@ -96,12 +117,16 @@ function Home() {
             </NavLink>
           )}
           {!isContactHovered && <div className={"navLinks"}>Kapil</div>}
-        </div>
-      </nav>
-      <div className={"overflow-x-hidden"}>
-        <img
+        </motion.div>
+      </motion.nav>
+      <div className={"overflow-hidden "}>
+        <motion.img
           src={kapil}
           alt="image"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
           className={
             "hidden laptop:inline tablet:w-[800px]  desktop:w-[100%] h-full bg-contain"
           }

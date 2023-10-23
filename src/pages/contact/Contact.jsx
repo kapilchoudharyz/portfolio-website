@@ -15,7 +15,7 @@ function Contact() {
               <span>Let's make</span> <span>something great </span>
             </h1>
           </div>
-          <div className="flex min-h-screen flex-col items-center justify-center laptop:px-0 px-3 smallerMobile:px-6 tablet:px-28 py-4 contact__info gap-y-[2rem] laptop:w-aboutWidth">
+          <div className="flex min-h-screen flex-col items-center justify-center px-3 py-4 laptop:px-0 smallerMobile:px-6 tablet:px-28 contact__info gap-y-[2rem] laptop:w-aboutWidth">
             <h2
               className={
                 "text-5xl tablet:text-5xl laptop:text-6xl desktop:text-7vw font-extrabold text-start w-full text-red-600"

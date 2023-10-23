@@ -1,5 +1,6 @@
 import "./About.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
+import { motion } from "framer-motion";
 
 // import img from "public/kapil.jpg";
 
@@ -18,7 +19,7 @@ function About() {
               I craft beautiful <br /> and engaging web <br /> experiences.
             </h1>
           </div>
-          <div className="flex min-h-screen flex-col items-center justify-center gap-y-8 laptop:px-0 px-3 smallerMobile:px-6 tablet:px-28 py-4 info__about__me laptop:w-aboutWidth">
+          <div className="flex min-h-screen flex-col items-center justify-center gap-y-8 px-3 py-4 laptop:px-0 smallerMobile:px-6 tablet:px-28 info__about__me laptop:w-aboutWidth">
             <h2
               className={
                 "text-7vw  font-extrabold text-red-600 text-start  w-full "
