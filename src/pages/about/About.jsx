@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 // import img from "public/kapil.jpg";
 
 function About() {
+  //TODO Add animations.
   return (
     <>
       <Navbar></Navbar>
