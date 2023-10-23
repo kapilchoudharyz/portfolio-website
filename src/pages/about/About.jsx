@@ -52,9 +52,11 @@ function About() {
             </h3>
             <div className="w-full resume__wrapper">
               <a
-                href={"public/kapil_resume.pdf"}
+                href={
+                  "https://drive.google.com/file/d/1ouZ4C6ffvFKsSwiTj27udyeqJtQyEUez/view?usp=sharing"
+                }
                 className={"links"}
-                download={true}
+                target={"_blank"}
               >
                 Download resume (pdf 67kb)
               </a>
